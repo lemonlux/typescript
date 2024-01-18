@@ -42,4 +42,16 @@ const talla = Tallas2.Pequeña;
 console.log(talla);
 const state = 2;
 console.log(state);
+const object = { num: 1, name: "pato" };
+const mila = {
+    name: "mila",
+    type: "cat",
+    age: 3,
+    sterilized: true,
+    owner: {
+        name: "Lucía",
+        age: 27,
+    }
+};
+console.log(mila);
 //# sourceMappingURL=index.js.map

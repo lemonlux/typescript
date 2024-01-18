@@ -58,3 +58,82 @@ const enum LoadingState {Idle, Loading, Success, Error}
 const state = LoadingState.Success
 
 console.log(state)
+
+
+const object: { num: number, name: string} = {num: 1,  name: "pato"}
+
+type Owner = {
+    name: string
+    age: number
+}
+
+type Pet = {
+    name: string
+    type: string
+    age: number
+    sterilized: boolean
+    owner: Owner
+    }
+
+    const mila: Pet = {
+        name: "mila",
+        type: "cat",
+        age: 3,
+        sterilized: true,
+        owner: {
+            name: "Lucía",
+            age: 27,
+        }
+    }
+
+    console.log(mila)
+
+    let pets: Pet[] = []
+
+    pets = [
+        {
+            name: "mila",
+            type: "cat",
+            age: 3,
+            sterilized: true,
+            owner: {
+                name: "Lucía",
+                age: 27,
+            }
+        },
+        {
+            name: "menta",
+            type: "cat",
+            age: 4,
+            sterilized: true,
+            owner: {
+                name: "Miguel",
+                age: 10,
+            }
+        },
+        {
+            name: "oreo",
+            type: "cat",
+            age: 2,
+            sterilized: true,
+            owner: {
+                name: "Dani",
+                age: 23,
+            }
+        }
+    ]
+
+    const sum = (x: number, y: number): number => {
+        return x + y;
+    }
+    
+    const isYoung = (a: number): string =>{
+    if(a <= 30) return 'is young'
+    return 'is not young'
+    }
+
+    function error(msg: string): never {
+        throw new Error(msg);
+    }
+
+    

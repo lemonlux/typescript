@@ -136,4 +136,21 @@ type Pet = {
         throw new Error(msg);
     }
 
-    
+    let talla2: number | string = 38
+
+talla2 = "M"
+
+type Alumno = {
+    name: string,
+    age: number,
+    subjects: string[],
+}
+
+type Profesor = {
+    name: string,
+    age: number,
+    rol: string,
+
+}
+
+const colegio: Alumno | Profesor = { name: " ", age: 30 , rol: ""}

@@ -207,10 +207,11 @@
 // const input = document.getElementById('username') as HTMLInputElement
 
 class Character {
-private _id: number;
-  name: string;
+  private _id: number;
+  readonly name: string;
   lvl: number;
   hp: number;
+  child?: string;
   constructor(_id: number, name: string, lvl: number, hp: number) {
     this._id = _id;
     this.name = name;
@@ -231,4 +232,36 @@ const paco = new Character(1, "Paco", 1000000, 1000000);
 paco.lowerHp(999999);
 
 console.log(paco);
+
+class CharacterTwo {
+  child?: string;
+  static movie: string = "Los juegos del hambre"
+  constructor(
+    private readonly _id: number,
+    public name: string,
+    public lvl: number,
+    private _hp: number
+  ) {}
+
+  lowerHp(damage: number): number {
+    this.hp = this.hp - damage;
+    return this.hp;
+  }
+
+  get id(): number {
+    return this._id;
+  }
+  set hp(damage: number) {
+    this._hp = this._hp - damage;
+  }
+}
+
+const paca = new CharacterTwo(2, "Paca", 100000, 10000);
+
+paca.hp = 200;
+paca.id
+
+console.log(paca, paca.id);
+
+CharacterTwo.movie
 

@@ -33,8 +33,10 @@ class CharacterTwo {
         this._hp = this._hp - damage;
     }
 }
+CharacterTwo.movie = "Los juegos del hambre";
 const paca = new CharacterTwo(2, "Paca", 100000, 10000);
 paca.hp = 200;
 paca.id;
 console.log(paca, paca.id);
+CharacterTwo.movie;
 //# sourceMappingURL=index.js.map

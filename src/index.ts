@@ -265,3 +265,17 @@ console.log(paca, paca.id);
 
 CharacterTwo.movie
 
+
+function names(namesAndAges: Array<[string, number]>): string[] {
+    let names: string[] = []
+     namesAndAges.map((nameAndAge) => names.push(nameAndAge[0]))
+      return names
+  }
+
+  console.log(names([['Amir', 34], ['Betty', 17]]))
+
+  console.log(names([['Betty', 17], ['Cindy', 26], ['Dalili', 82], ['Ebony', 10]]))
+
+  function namesTwo(namesAndAges: [string, number][]): string[] {
+    return namesAndAges.map(nameAndAge => nameAndAge[0]);
+  }

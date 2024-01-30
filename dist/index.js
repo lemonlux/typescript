@@ -39,4 +39,10 @@ paca.hp = 200;
 paca.id;
 console.log(paca, paca.id);
 CharacterTwo.movie;
+function names(namesAndAges) {
+    let names = [];
+    namesAndAges.map((nameAndAge) => names.push(nameAndAge[0]));
+    return names;
+}
+console.log(names([['Amir', 34], ['Betty', 17]]));
 //# sourceMappingURL=index.js.map
